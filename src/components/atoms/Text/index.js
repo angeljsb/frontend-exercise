@@ -1,14 +1,16 @@
 import React from "react";
 
 const Text = (props = {}) => {
-  const { size, children, ...otherProps } = props;
+  const { size, children, className, ...otherProps } = props;
 
-  const realSize = ["small", "medium", "large", "presentation"].includes(size)
+  const realSize = ["small", "medium", "large"].includes(size)
     ? size
     : "medium";
 
+  const parentClass = className || "";
+
   return (
-    <p className={`text text--${realSize}`} {...otherProps}>
+    <p className={`text text--${realSize} ${parentClass}`} {...otherProps}>
       {children}
     </p>
   );
