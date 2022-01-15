@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const Title = (props = {}) => {
   const { size, children, className, ...otherProps } = props;

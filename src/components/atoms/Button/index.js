@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const Button = (props = {}) => {
   const { color, children, className, ...otherProps } = props;

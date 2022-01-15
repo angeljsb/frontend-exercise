@@ -1,0 +1,17 @@
+.text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.text--small {
+  font-size: 10px;
+}
+
+.text--medium {
+  font-size: 14px;
+}
+
+.text--large {
+  font-size: 20px;
+}

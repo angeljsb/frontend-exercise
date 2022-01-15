@@ -1,0 +1,21 @@
+.title {
+  font-family: "Sansita One", cursive;
+  font-weight: 700;
+  color: white;
+}
+
+.title--small {
+  font-size: 20px;
+}
+
+.title--medium {
+  font-size: 36px;
+}
+
+.title--large {
+  font-size: 84px;
+}
+
+.title--presentation {
+  font-size: 124px;
+}

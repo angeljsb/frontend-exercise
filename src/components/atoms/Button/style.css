@@ -1,0 +1,18 @@
+.button {
+  outline: none;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+}
+
+.button--primary {
+  background-color: #f58282;
+}
+
+.button--secondary {
+  background-color: #828282;
+}
