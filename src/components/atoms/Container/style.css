@@ -1,0 +1,8 @@
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container--rounded {
+  border-radius: 20px;
+}
