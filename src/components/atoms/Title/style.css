@@ -1,7 +1,10 @@
+@import url("http://fonts.cdnfonts.com/css/sansita-one");
+
 .title {
-  font-family: "Sansita One", cursive;
-  font-weight: 700;
+  font-family: "Sansita One", "Sansita Swashed", cursive;
+  font-weight: 500;
   color: white;
+  margin: 0;
 }
 
 .title--small {
