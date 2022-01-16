@@ -1,0 +1,19 @@
+.why-choose {
+  height: 100vh;
+  background: #f4f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-choose__container {
+  margin: auto;
+}
+
+.why-choose__title {
+  margin-bottom: 20px;
+}
+
+.why-choose__text {
+  margin-bottom: 70px;
+}

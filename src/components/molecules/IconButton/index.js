@@ -9,7 +9,11 @@ const IconButton = (props = {}) => {
 
   return (
     <Button className={`icon-button ${parentClass}`} {...otherProps}>
-      <div className="icon-button__icon-container">{icon}</div>
+      <img
+        src={icon}
+        alt="icon-button"
+        className="icon-button__icon-container"
+      ></img>
     </Button>
   );
 };

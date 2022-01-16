@@ -4,7 +4,9 @@
   font-weight: normal;
   font-size: 53px;
   line-height: 62px;
+  text-align: left;
   /* or 117% */
 
   color: #2d314e;
+  margin: 0;
 }

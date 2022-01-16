@@ -1,9 +1,12 @@
 .title {
+  margin: 0;
+
   font-family: "Public Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 53px;
   line-height: 62px;
+  text-align: left;
 
   color: #2d314e;
 }

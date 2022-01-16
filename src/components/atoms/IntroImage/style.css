@@ -1,0 +1,21 @@
+.intro-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.intro-image__mockups,
+.intro-image__group {
+  position: absolute;
+}
+
+.intro-image__mockups {
+  z-index: 1;
+  right: 0;
+}
+
+.intro-image__group {
+  left: 0;
+}

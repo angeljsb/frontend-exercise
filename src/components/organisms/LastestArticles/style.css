@@ -1,0 +1,14 @@
+.lastest-articles {
+  height: 100vh;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lastest-articles__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}

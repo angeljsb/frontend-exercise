@@ -1,0 +1,9 @@
+.choose-reason {
+  width: 250px;
+}
+
+.choose-reason__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+}

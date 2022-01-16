@@ -3,19 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 72px;
+  height: 72px;
 }
 
-.button.button--small.icon-button {
-  width: 20px;
-  height: 20px;
-}
-
-.button.button--medium.icon-button {
-  width: 30px;
-  height: 30px;
-}
-
-.button.button--large.icon-button {
-  width: 40px;
-  height: 40px;
+.icon-button__icon-container {
+  height: 100%;
+  width: 100%;
 }
