@@ -2,7 +2,6 @@
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin: 0;
-  font-size: 30px;
 }
 
 .subtitle--black {
@@ -11,4 +10,16 @@
 
 .subtitle--white {
   color: white;
+}
+
+.subtitle--small {
+  font-size: 20px;
+}
+
+.subtitle--medium {
+  font-size: 30px;
+}
+
+.subtitle--large {
+  font-size: 42px;
 }

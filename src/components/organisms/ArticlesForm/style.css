@@ -1,0 +1,15 @@
+.articles-form__container {
+  width: 300px;
+}
+
+.articles-form__header {
+  border-bottom: 1px solid #909090;
+  margin-bottom: 20px;
+}
+
+.articles-form__footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
