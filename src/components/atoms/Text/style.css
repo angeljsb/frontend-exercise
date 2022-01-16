@@ -1,30 +1,19 @@
 .text {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  margin: 0;
-  text-transform: capitalize;
-}
+  font-family: "Public Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
 
-.text--small {
-  font-size: 12px;
+  color: #959499;
 }
 
 .text--medium {
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 24px;
 }
 
 .text--large {
-  font-size: 24px;
-}
-
-.text--black {
-  color: #161616;
-}
-
-.text--gray {
-  color: #909090;
-}
-
-.text--white {
-  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
 }

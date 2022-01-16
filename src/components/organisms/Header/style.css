@@ -1,0 +1,10 @@
+.header {
+  height: 80px;
+}
+
+.header__navigation {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

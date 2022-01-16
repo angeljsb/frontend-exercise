@@ -1,0 +1,36 @@
+.navigation-link {
+  height: 100%;
+}
+
+.navigation-link__link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Public Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 7px;
+  color: #99989d;
+  position: relative;
+  text-decoration: none;
+}
+
+.navigation-link__mark {
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  transition: width 500ms;
+}
+
+.navigation-link__link:hover {
+  color: #2d314d;
+}
+
+.navigation-link__link:hover .navigation-link__mark {
+  background: linear-gradient(90deg, #36cb6d 0%, #29b8c8 100%);
+  width: 100%;
+}

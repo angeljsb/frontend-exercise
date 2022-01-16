@@ -2,16 +2,12 @@ import React from "react";
 import "./style.css";
 
 const Title = (props = {}) => {
-  const { size, children, className, ...otherProps } = props;
-
-  const realSize = ["small", "medium", "large", "presentation"].includes(size)
-    ? size
-    : "medium";
+  const { children, className, ...otherProps } = props;
 
   const parentClass = className || "";
 
   return (
-    <h1 className={`title title--${realSize} ${parentClass}`} {...otherProps}>
+    <h1 className={`title ${parentClass}`} {...otherProps}>
       {children}
     </h1>
   );

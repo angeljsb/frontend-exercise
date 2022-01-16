@@ -1,25 +1,10 @@
 .subtitle {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  margin: 0;
-}
+  font-family: "Public Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 62px;
+  /* or 117% */
 
-.subtitle--black {
-  color: #161616;
-}
-
-.subtitle--white {
-  color: white;
-}
-
-.subtitle--small {
-  font-size: 20px;
-}
-
-.subtitle--medium {
-  font-size: 30px;
-}
-
-.subtitle--large {
-  font-size: 42px;
+  color: #2d314e;
 }

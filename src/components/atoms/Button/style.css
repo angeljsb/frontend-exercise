@@ -1,51 +1,21 @@
 .button {
   outline: none;
   border: 0;
-  border-radius: 20px;
-  font-family: "Roboto", sans-serif;
-  color: white;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.button--small {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 14px;
-}
-
-.button--medium {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  font-family: "Public Sans", sans-serif;
   font-size: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: white;
+  border-radius: 89px;
+  background: linear-gradient(90deg, #31cf70 4.85%, #2cb9cb 100%);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 26px;
+  padding-right: 26px;
 }
 
-.button--large {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 20px;
-}
-
-.button--primary {
-  background-color: #f58282;
-}
-
-.button--secondary {
-  background-color: #828282;
-}
-
-.button--primary:hover {
-  background-color: #f56262;
-}
-
-.button--secondary:hover {
-  background-color: #5d5d5d;
+.button:hover {
+  background: linear-gradient(90deg, #84e1a7 4.85%, #81d6db 100%);
 }
 
 .button:disabled {
