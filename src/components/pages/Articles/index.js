@@ -14,16 +14,18 @@ import "./style.css";
 const Articles = (props = {}) => {
   const [data, setData] = useState(null);
   const [open, setOpen] = useState(false);
+  const [watcher, setWatcher] = useState(true);
 
   useEffect(() => {
-    Api.get().then((res) => {
-      setData(res.data);
-    });
-  }, []);
+    Api.get()
+      .then((res) => res.json())
+      .then((json) => setData(json.data));
+  }, [watcher]);
 
   const closeModal = () => setOpen(false);
-
   const openModal = () => setOpen(true);
+
+  const triggerUpdate = () => setWatcher(!watcher);
 
   return (
     <section className="articles">
@@ -45,11 +47,12 @@ const Articles = (props = {}) => {
           </Grid>
         )}
       </Container>
-      <ArticlesForm open={open} onClose={closeModal} />
+      <ArticlesForm open={open} onClose={closeModal} onSend={triggerUpdate} />
       <IconButton
         className="articles__create-button"
         onClick={openModal}
         icon={<FiPlus size="1rem" />}
+        title="Add article"
       ></IconButton>
       <Footer />
     </section>

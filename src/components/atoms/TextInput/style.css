@@ -8,6 +8,14 @@
   width: -moz-available;
 }
 
+.text-input--danger {
+  border-color: #f56262;
+}
+
+.text-input--success {
+  border-color: #00b7ff;
+}
+
 .text-input--textarea.text-input--resize-vertical {
   resize: vertical;
 }

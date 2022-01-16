@@ -2,11 +2,20 @@ const api = () => {
   const baseUrl = "https://servicepad-post-api.herokuapp.com/articles/";
 
   const get = async () => {
-    const res = await fetch(baseUrl);
-    return await res.json();
+    return await fetch(baseUrl);
   };
 
-  return { get };
+  const post = async (data) => {
+    return await fetch(baseUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  };
+
+  return { get, post };
 };
 
 const Api = api();
