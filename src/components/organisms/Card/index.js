@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../../atoms/Container";
 import Text from "../../atoms/Text";
+import Subtitle from "../../atoms/Subtitle";
 import RoundImage from "../../molecules/RoundImage";
 
 const Card = (props = {}) => {
@@ -16,9 +17,11 @@ const Card = (props = {}) => {
             alt={article.title}
           />
         </Container>
-        <Container className="card__container card__title-container"></Container>
+        <Container className="card__container card__title-container">
+          <Subtitle className="card__title">{article.title}</Subtitle>
+        </Container>
         <Container className="card__container card__content-container">
-          <Text>{article.content}</Text>
+          <Text className="card__content">{article.content}</Text>
         </Container>
       </Container>
     </Container>
