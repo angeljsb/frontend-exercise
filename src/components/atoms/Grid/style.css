@@ -1,6 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
 }
 
 .grid--columns-2 {
@@ -22,3 +23,48 @@
 .grid--columns-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
+
+@media (max-width: 800px) {
+  .grid--columns-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .grid--columns-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .grid--columns-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid--columns-6 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .grid--columns-12 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 400px) {
+  .grid--columns-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .grid--columns-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .grid--columns-4 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .grid--columns-6 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid--columns-12 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+

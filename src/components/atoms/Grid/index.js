@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const Grid = (props = {}) => {
   const { columns, children, className, ...otherProps } = props;

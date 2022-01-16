@@ -1,8 +1,8 @@
 .text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: white;
   margin: 0;
+  text-transform: capitalize;
 }
 
 .text--small {
@@ -15,4 +15,12 @@
 
 .text--large {
   font-size: 30px;
+}
+
+.text--black {
+  color: #161616;
+}
+
+.text--white {
+  color: white;
 }

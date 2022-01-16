@@ -1,11 +1,13 @@
 import React from "react";
-import Presentation from "../../molecules/Presentation";
+import Footer from "../../molecules/Footer";
+import Presentation from "../../organisms/Presentation";
 import "./style.css";
 
 const Welcome = (props = {}) => {
   return (
     <section className="welcome">
-      <Presentation />
+      <Presentation className="welcome__presentation" />
+      <Footer></Footer>
     </section>
   );
 };

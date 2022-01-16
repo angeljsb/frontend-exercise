@@ -1,7 +1,14 @@
 .subtitle {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: white;
   margin: 0;
   font-size: 30px;
+}
+
+.subtitle--black {
+  color: #161616;
+}
+
+.subtitle--white {
+  color: white;
 }

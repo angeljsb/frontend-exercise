@@ -1,0 +1,11 @@
+.card__body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.card__image {
+    height: 200px;
+}

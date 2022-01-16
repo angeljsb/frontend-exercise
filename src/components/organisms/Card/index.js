@@ -3,6 +3,7 @@ import Container from "../../atoms/Container";
 import Text from "../../atoms/Text";
 import Subtitle from "../../atoms/Subtitle";
 import RoundImage from "../../molecules/RoundImage";
+import "./style.css";
 
 const Card = (props = {}) => {
   const { article, ...otherProps } = props;
@@ -18,10 +19,10 @@ const Card = (props = {}) => {
           />
         </Container>
         <Container className="card__container card__title-container">
-          <Subtitle className="card__title">{article.title}</Subtitle>
+          <Subtitle className="card__title" color="black">{article.title}</Subtitle>
         </Container>
         <Container className="card__container card__content-container">
-          <Text className="card__content">{article.content}</Text>
+          <Text className="card__content" size="small" color="black">{article.content}</Text>
         </Container>
       </Container>
     </Container>

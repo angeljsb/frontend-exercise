@@ -2,12 +2,13 @@ import React from "react";
 import "./style.css";
 
 const Subtitle = (props = {}) => {
-  const { children, className, ...otherProps } = props;
+  const { children, color, className, ...otherProps } = props;
 
   const parentClass = className || "";
+  const colorClass = color ? `subtitle--${color}` : "subtitle--white"
 
   return (
-    <h1 className={`subtitle ${parentClass}`} {...otherProps}>
+    <h1 className={`subtitle ${colorClass} ${parentClass}`} {...otherProps}>
       {children}
     </h1>
   );

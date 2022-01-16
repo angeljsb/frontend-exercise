@@ -3,7 +3,6 @@ import Welcome from "./components/pages/Welcome";
 import Articles from "./components/pages/Articles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SvgBackground from "./components/atoms/SvgBackground";
-import Footer from "./components/molecules/Footer";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
             <Route path="/articles" element={<Articles />}/>
           </Routes>
         </SvgBackground>
-        <Footer />
       </BrowserRouter>
     </div>
   );
