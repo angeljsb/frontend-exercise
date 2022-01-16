@@ -6,19 +6,23 @@
 }
 
 .text--small {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .text--medium {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .text--large {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .text--black {
   color: #161616;
+}
+
+.text--gray {
+  color: #909090;
 }
 
 .text--white {

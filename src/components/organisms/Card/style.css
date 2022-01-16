@@ -9,3 +9,14 @@
 .card__image {
     height: 200px;
 }
+
+.card__content-container {
+    height: 100px;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.card__author-date-container {
+    display: flex;
+    justify-content: space-between;
+}
