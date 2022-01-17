@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import LabeledTextInput from "../../molecules/LabeledTextInput";
 import Container from "../../atoms/Container";
 import Button from "../../atoms/Button";
@@ -10,6 +10,7 @@ const ArticlesForm = (props = {}) => {
   const { onSend, editing, ...otherProps } = props;
   const { articleId } = useParams();
   const navigate = useNavigate();
+  const scrollRef = useRef(null);
 
   const [author, setAuthor] = useState("");
   const [title, setTitle] = useState("");
@@ -22,6 +23,12 @@ const ArticlesForm = (props = {}) => {
       setContent(editing.content);
     }
   }, [editing]);
+
+  useEffect(() => {
+    if (articleId && scrollRef) {
+      scrollRef.current.scrollIntoView();
+    }
+  }, [articleId, scrollRef]);
 
   const [loading, setLoading] = useState(false);
 
@@ -71,7 +78,7 @@ const ArticlesForm = (props = {}) => {
   };
 
   return (
-    <div className="articles-form">
+    <div className="articles-form" ref={scrollRef}>
       <form onSubmit={handleSubmit} {...otherProps}>
         <Container className="articles-form__container">
           <LabeledTextInput

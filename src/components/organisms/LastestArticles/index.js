@@ -1,25 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Subtitle from "../../atoms/Subtitle";
 import Button from "../../atoms/Button";
 import Grid from "../../atoms/Grid";
 import GridItem from "../../atoms/GridItem";
-import Api from "../../../api";
 import "./style.css";
 import Article from "../Article";
 import { Link } from "react-router-dom";
+import ArticlesContext from "../../../context/ArticlesContext";
 
 const LastestArticles = (props = {}) => {
-  const [data, setData] = useState(null);
+  const { articles } = useContext(ArticlesContext);
 
-  useEffect(() => {
-    Api.get().then(async (res) => {
-      if (!res.ok) {
-        return;
-      }
-      const json = await res.json();
-      setData(json.data.reverse().slice(0, 4));
-    });
-  });
+  const data = articles?.reverse().slice(0, 4);
 
   return (
     <section className="lastest-articles">
@@ -32,7 +24,7 @@ const LastestArticles = (props = {}) => {
         </div>
         <div className="lastest-articles__grid">
           <Grid columns={4}>
-            {data === null
+            {!data
               ? ""
               : data.map((article, index) => (
                   <GridItem key={index}>

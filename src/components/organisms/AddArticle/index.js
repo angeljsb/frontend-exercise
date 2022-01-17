@@ -1,27 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Api from "../../../api";
+import React, { useContext } from "react";
 import ArticlesForm from "../../organisms/ArticlesForm";
 import Subtitle from "../../atoms/Subtitle";
 import Text from "../../atoms/Text";
 import "./style.css";
 import ArticlesTable from "../ArticlesTable";
 import { useParams } from "react-router-dom";
+import ArticlesContext from "../../../context/ArticlesContext";
 
 const AddArticle = (props = {}) => {
-  const [data, setData] = useState(null);
-  const [watcher, setWatcher] = useState(true);
+  const { articles, reload } = useContext(ArticlesContext);
   const { articleId } = useParams();
 
-  useEffect(() => {
-    Api.get()
-      .then((res) => res.json())
-      .then((json) => setData(json.data));
-  }, [watcher]);
-
-  const triggerUpdate = () => setWatcher(!watcher);
-
   const editing =
-    articleId && data ? data.find((r) => r.id === parseInt(articleId)) : null;
+    articleId && articles
+      ? articles.find((r) => r.id === parseInt(articleId))
+      : null;
 
   return (
     <section className="add-article">
@@ -34,7 +27,7 @@ const AddArticle = (props = {}) => {
         </Text>
       </div>
       <div className="add-article__form-container">
-        <ArticlesForm onSend={triggerUpdate} editing={editing} />
+        <ArticlesForm onSend={reload} editing={editing} />
       </div>
       <div className="add-article__subtitle-container">
         <Subtitle size="small">Previous Articles</Subtitle>
@@ -45,7 +38,7 @@ const AddArticle = (props = {}) => {
         </Text>
       </div>
       <div className="add-article__table-container">
-        <ArticlesTable articles={data} />
+        <ArticlesTable articles={articles} />
       </div>
     </section>
   );
