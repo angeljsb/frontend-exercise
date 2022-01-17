@@ -32,7 +32,7 @@ const Header = (props = {}) => {
   return (
     <header className="header">
       <nav className="header__navigation">
-        <Link to="">
+        <Link to="/">
           <Logo color="black"></Logo>
         </Link>
         <NavList items={directions} />

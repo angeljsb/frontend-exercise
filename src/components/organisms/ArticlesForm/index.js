@@ -1,16 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LabeledTextInput from "../../molecules/LabeledTextInput";
 import Container from "../../atoms/Container";
 import Button from "../../atoms/Button";
 import "./style.css";
 import Api from "../../../api";
+import { useNavigate, useParams } from "react-router-dom";
 
 const ArticlesForm = (props = {}) => {
-  const { onSend, ...otherProps } = props;
+  const { onSend, editing, ...otherProps } = props;
+  const { articleId } = useParams();
+  const navigate = useNavigate();
 
   const [author, setAuthor] = useState("");
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+
+  useEffect(() => {
+    if (editing) {
+      setAuthor(editing.author);
+      setTitle(editing.title);
+      setContent(editing.content);
+    }
+  }, [editing]);
 
   const [loading, setLoading] = useState(false);
 
@@ -29,20 +40,28 @@ const ArticlesForm = (props = {}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const form = e.target;
     const data = {
-      author: form["author"].value,
-      title: form["title"].value,
-      content: form["content"].value,
+      author,
+      title,
+      content,
     };
+    if (articleId) data.id = parseInt(articleId);
+
+    const method = articleId ? "put" : "post";
 
     setLoading(true);
-    Api.post(data)
+    Api[method](data)
       .then((res) => res.json())
       .then((json) => {
         onSend(json);
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setLoading(false);
+        setAuthor("");
+        setTitle("");
+        setContent("");
+        navigate("/articles");
+      });
   };
 
   const isDanger = (value) => value.length < 3 || value.length > 50;
@@ -61,6 +80,7 @@ const ArticlesForm = (props = {}) => {
             label="Author"
             value={author}
             danger={isDanger(author)}
+            disabled={loading}
             onChange={handleChangeAuthor}
           ></LabeledTextInput>
           <LabeledTextInput
@@ -69,6 +89,7 @@ const ArticlesForm = (props = {}) => {
             label="Blog Title"
             value={title}
             danger={isDanger(title)}
+            disabled={loading}
             onChange={handleChangeTitle}
           ></LabeledTextInput>
           <LabeledTextInput
@@ -77,6 +98,7 @@ const ArticlesForm = (props = {}) => {
             label="Blog Content"
             value={content}
             danger={isDanger(content)}
+            disabled={loading}
             type="textarea"
             resize="vertical"
             onChange={handleChangeContent}

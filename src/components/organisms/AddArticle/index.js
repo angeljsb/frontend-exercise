@@ -5,10 +5,12 @@ import Subtitle from "../../atoms/Subtitle";
 import Text from "../../atoms/Text";
 import "./style.css";
 import ArticlesTable from "../ArticlesTable";
+import { useParams } from "react-router-dom";
 
 const AddArticle = (props = {}) => {
   const [data, setData] = useState(null);
   const [watcher, setWatcher] = useState(true);
+  const { articleId } = useParams();
 
   useEffect(() => {
     Api.get()
@@ -17,6 +19,9 @@ const AddArticle = (props = {}) => {
   }, [watcher]);
 
   const triggerUpdate = () => setWatcher(!watcher);
+
+  const editing =
+    articleId && data ? data.find((r) => r.id === parseInt(articleId)) : null;
 
   return (
     <section className="add-article">
@@ -29,7 +34,7 @@ const AddArticle = (props = {}) => {
         </Text>
       </div>
       <div className="add-article__form-container">
-        <ArticlesForm onSend={triggerUpdate} />
+        <ArticlesForm onSend={triggerUpdate} editing={editing} />
       </div>
       <div className="add-article__subtitle-container">
         <Subtitle size="small">Previous Articles</Subtitle>

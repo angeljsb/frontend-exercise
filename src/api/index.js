@@ -15,7 +15,23 @@ const api = () => {
     });
   };
 
-  return { get, post };
+  const put = async (data) => {
+    const url = baseUrl + data.id;
+    return await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "*/*",
+      },
+      body: JSON.stringify({
+        author: data.author,
+        title: data.title,
+        content: data.content,
+      }),
+    });
+  };
+
+  return { get, post, put };
 };
 
 const Api = api();

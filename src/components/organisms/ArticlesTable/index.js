@@ -40,7 +40,7 @@ const ArticlesTable = (props = {}) => {
             formated.map((article, index) => {
               const register = fields.map((key) => article[key]);
               register.push(
-                <Link to={`articles/${articles[index].id}`}>Edit</Link>
+                <Link to={`/articles/${articles[index].id}`}>Edit</Link>
               );
               return <TableRow register={register} key={index}></TableRow>;
             })

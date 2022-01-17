@@ -20,5 +20,6 @@
 
 .button:disabled {
   cursor: default;
-  background-color: #c3c3c3;
+  background: linear-gradient(90deg, #31cf70 4.85%, #2cb9cb 100%);
+  opacity: 0.5;
 }
