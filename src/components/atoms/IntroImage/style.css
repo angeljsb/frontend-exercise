@@ -9,13 +9,16 @@
 .intro-image__mockups,
 .intro-image__group {
   position: absolute;
+  top: 0;
 }
 
 .intro-image__mockups {
   z-index: 1;
   right: 0;
+  height: 110%;
 }
 
 .intro-image__group {
-  left: 0;
+  right: 0;
+  height: 80%;
 }

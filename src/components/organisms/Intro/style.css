@@ -22,3 +22,14 @@
     min-width: 300px;
   }
 }
+
+@media (max-width: 800px) {
+  .intro {
+    flex-direction: column-reverse;
+  }
+
+  .intro__container {
+    height: 50%;
+    width: 100%;
+  }
+}

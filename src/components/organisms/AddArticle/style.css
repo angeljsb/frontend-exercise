@@ -1,0 +1,14 @@
+.add-article {
+  padding: 60px 160px;
+  background-color: #f9f9f9;
+}
+
+.add-article__text-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.add-article__form-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}

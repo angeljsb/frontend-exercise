@@ -1,19 +1,20 @@
 .text-input {
   outline: none;
-  border: 2px solid #909090;
-  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  box-sizing: border-box;
+  /* shadow/sm */
+
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
   padding: 5px 10px;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   width: -webkit-fill-available;
   width: -moz-available;
 }
 
-.text-input--danger {
-  border-color: #f56262;
-}
-
-.text-input--success {
-  border-color: #00b7ff;
+.text-input--textarea {
+  height: 300px;
 }
 
 .text-input--textarea.text-input--resize-vertical {

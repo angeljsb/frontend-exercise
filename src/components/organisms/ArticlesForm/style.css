@@ -1,15 +1,15 @@
+.articles-form {
+  border-radius: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  background-color: white;
+  padding: 45px;
+  width: 700px;
+  max-width: 80%;
+  margin: auto;
+}
+
 .articles-form__container {
-  width: 300px;
-}
-
-.articles-form__header {
-  border-bottom: 1px solid #909090;
-  margin-bottom: 20px;
-}
-
-.articles-form__footer {
-  margin-top: 20px;
   display: flex;
-  justify-content: flex-end;
-  gap: 5px;
+  flex-direction: column;
+  gap: 20px;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../../atoms/Container";
 import TextInput from "../../atoms/TextInput";
+import "./style.css";
 
 const LabeledTextInput = (props = {}) => {
   const { id, label, className, ...otherProps } = props;

@@ -6,6 +6,7 @@ import GridItem from "../../atoms/GridItem";
 import Api from "../../../api";
 import "./style.css";
 import Article from "../Article";
+import { Link } from "react-router-dom";
 
 const LastestArticles = (props = {}) => {
   const [data, setData] = useState(null);
@@ -25,7 +26,9 @@ const LastestArticles = (props = {}) => {
       <div className="lastest-articles__container">
         <div className="lastest-articles__header">
           <Subtitle>Latest Articles</Subtitle>
-          <Button>+ Add New Article</Button>
+          <Link to="/articles">
+            <Button>+ Add New Article</Button>
+          </Link>
         </div>
         <div className="lastest-articles__grid">
           <Grid columns={4}>
