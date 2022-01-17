@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../organisms/Header";
 import Intro from "../../organisms/Intro";
 import WhyChoose from "../../organisms/WhyChoose";
@@ -7,6 +7,9 @@ import Footer from "../../organisms/Footer";
 import "./style.css";
 
 const Welcome = (props = {}) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="welcome">
       <Header></Header>
