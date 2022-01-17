@@ -1,0 +1,16 @@
+.footer-links__grid {
+  gap: 16px;
+}
+
+.footer-links__grid-item {
+  text-align: start;
+}
+
+.link.footer-links__link {
+  color: white;
+  font-size: 14px;
+}
+
+.footer-links__link:hover {
+  color: #77bda3;
+}

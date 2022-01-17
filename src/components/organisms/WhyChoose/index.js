@@ -43,8 +43,9 @@ const WhyChoose = (props = {}) => {
         <div className="why-choose__text">
           <Text>
             We leverage Open Banking to turn your bank acount into your
-            financial hub. Control your finances like never before.
+            financial hub.
           </Text>
+          <Text>Control your finances like never before.</Text>
         </div>
         <div className="why-choose__reasons">
           <Grid columns="4">

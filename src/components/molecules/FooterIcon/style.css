@@ -1,0 +1,17 @@
+.footer-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-icon path {
+  fill: white;
+}
+
+.footer-icon:hover path {
+  fill: #77bda3;
+}

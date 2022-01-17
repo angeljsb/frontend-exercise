@@ -19,7 +19,7 @@ const Card = (props = {}) => {
       <Container className="card__body">
         <Container className="card__author-container">
           <Text className="card__author" size="small" color="black">
-            By: {article.author}
+            By {article.author}
           </Text>
         </Container>
         <Container className="card__container card__title-container">
