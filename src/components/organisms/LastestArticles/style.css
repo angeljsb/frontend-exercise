@@ -1,14 +1,25 @@
 .lastest-articles {
-  height: 100vh;
+  min-height: 100vh;
   background: #fafafa;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.lastest-articles__container {
+  margin: auto;
+  width: 80%;
 }
 
 .lastest-articles__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
+}
+
+.lastest-articles__grid {
   margin-bottom: 30px;
 }

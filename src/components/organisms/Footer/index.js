@@ -45,10 +45,10 @@ const Footer = (props = {}) => {
           <Logo color="white"></Logo>
           <SocialNav></SocialNav>
         </GridItem>
-        <GridItem>
+        <GridItem className="footer__links">
           <FooterLinks options={links}></FooterLinks>
         </GridItem>
-        <GridItem></GridItem>
+        <GridItem className="footer__empty-space"></GridItem>
         <GridItem className="footer__rights">
           <Button>Request Invite</Button>
           <Text className="footer__text">© Easybank. All Rights Reserved</Text>

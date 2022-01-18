@@ -5,11 +5,14 @@ import Grid from "../../atoms/Grid";
 import GridItem from "../../atoms/GridItem";
 import "./style.css";
 import Article from "../Article";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ArticlesContext from "../../../context/ArticlesContext";
 
 const LastestArticles = (props = {}) => {
   const { articles } = useContext(ArticlesContext);
+  const location = useLocation();
+
+  const isArticles = location.pathname.includes("articles");
 
   const data = articles?.reverse().slice(0, 4);
 
@@ -18,9 +21,13 @@ const LastestArticles = (props = {}) => {
       <div className="lastest-articles__container">
         <div className="lastest-articles__header">
           <Subtitle>Latest Articles</Subtitle>
-          <Link to="/articles">
-            <Button>+ Add New Article</Button>
-          </Link>
+          {isArticles ? (
+            <span></span>
+          ) : (
+            <Link to="/articles">
+              <Button>+ Add New Article</Button>
+            </Link>
+          )}
         </div>
         <div className="lastest-articles__grid">
           <Grid columns={4}>

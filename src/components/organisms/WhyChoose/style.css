@@ -1,13 +1,16 @@
 .why-choose {
-  height: 100vh;
+  min-height: 100vh;
   background: #f4f5f7;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .why-choose__container {
   margin: auto;
+  width: 80%;
 }
 
 .why-choose__title {

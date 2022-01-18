@@ -1,6 +1,12 @@
 .add-article {
-  padding: 60px 160px;
   background-color: #f9f9f9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.add-article__container {
+  margin: auto;
+  max-width: 80%;
 }
 
 .add-article__text-container {

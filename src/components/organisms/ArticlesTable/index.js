@@ -10,7 +10,10 @@ const ArticlesTable = (props = {}) => {
   const [first, setFirst] = useState(1);
   const rowsPerPage = 6;
 
-  const formated = articles
+  const reversed = [...articles].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+  const formated = reversed
     ?.slice(first, first + rowsPerPage)
     .map((article) => {
       return {
@@ -45,9 +48,7 @@ const ArticlesTable = (props = {}) => {
             ) : (
               formated.map((article, index) => {
                 const register = fields.map((key) => article[key]);
-                register.push(
-                  <Link to={`/articles/${articles[index].id}`}>Edit</Link>
-                );
+                register.push(<Link to={`/articles/${article.id}`}>Edit</Link>);
                 return <TableRow register={register} key={index}></TableRow>;
               })
             )}

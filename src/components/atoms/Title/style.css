@@ -10,3 +10,16 @@
 
   color: #2d314e;
 }
+
+@media (max-width: 850px) {
+  .title {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 35px;
+  }
+}

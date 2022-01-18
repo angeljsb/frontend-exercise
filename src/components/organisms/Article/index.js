@@ -4,31 +4,31 @@ import Text from "../../atoms/Text";
 import CardTitle from "../../atoms/CardTitle";
 import "./style.css";
 
-const Card = (props = {}) => {
+const Article = (props = {}) => {
   const { article, ...otherProps } = props;
 
   return (
-    <Container className="card" {...otherProps} rounded>
-      <Container className="card__header">
+    <Container className="article" {...otherProps} rounded>
+      <Container className="article__header">
         <img
-          className="card__image"
+          className="article__image"
           src={article.image_url}
           alt={article.title}
         />
       </Container>
-      <Container className="card__body">
-        <Container className="card__author-container">
-          <Text className="card__author" size="small" color="black">
+      <Container className="article__body">
+        <Container className="article__author-container">
+          <Text className="article__author" size="small" color="black">
             By {article.author}
           </Text>
         </Container>
-        <Container className="card__container card__title-container">
-          <CardTitle className="card__title" size="small">
+        <Container className="article__container article__title-container">
+          <CardTitle className="article__title" size="small">
             {article.title}
           </CardTitle>
         </Container>
-        <Container className="card__container card__content-container">
-          <Text className="card__content" color="black">
+        <Container className="article__container article__content-container">
+          <Text className="article__content" color="black">
             {article.content}
           </Text>
         </Container>
@@ -37,4 +37,4 @@ const Card = (props = {}) => {
   );
 };
 
-export default Card;
+export default Article;

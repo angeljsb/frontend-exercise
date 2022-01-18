@@ -1,13 +1,12 @@
-.card {
+.article {
   height: 350px;
-  width: 250px;
 }
 
-.card__header {
+.article__header {
   height: 45%;
 }
 
-.card__body {
+.article__body {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -18,12 +17,12 @@
   gap: 4px;
 }
 
-.card__image {
+.article__image {
   height: 100%;
   width: 100%;
 }
 
-.card__author {
+.article__author {
   font-size: 10px;
   line-height: 18px;
   /* identical to box height, or 180% */
@@ -31,11 +30,11 @@
   letter-spacing: -0.02em;
 }
 
-.card__content-container {
+.article__content-container {
   flex-grow: 1;
 }
 
-.card__content {
+.article__content {
   font-size: 13px;
   line-height: 18px;
   /* or 138% */
@@ -43,6 +42,6 @@
   letter-spacing: -0.02em;
 }
 
-.card:hover .card__title {
+.article:hover .article__title {
   color: #77bda3;
 }
