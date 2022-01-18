@@ -47,7 +47,7 @@ const Pagination = (props = {}) => {
               {p}
             </PaginationButton>
           ) : (
-            <span>...</span>
+            <PaginationButton>...</PaginationButton>
           )
         )}
       </div>
